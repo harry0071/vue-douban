@@ -1,6 +1,9 @@
 <template>
   <mu-appbar style="width: 100%;position:fixed;top:0;" :color="color">
     <span v-if="seen">豆瓣电影</span>
+    <mu-button icon slot="left" @click="$router.back()" v-if="backIcon">
+      <mu-icon value="keyboard_arrow_left" size=42></mu-icon>
+    </mu-button>
     <mu-button icon slot="right" :to="{name:'search'}" style="text-decoration:none;" v-if="seen">
       <mu-icon size=32 value="search"></mu-icon>
     </mu-button>
@@ -26,7 +29,14 @@
   			} else {
   				return true;
   			}
-  		}
+  		},
+      backIcon(){
+        if (this.$route.name == 'detail') {
+          return true;
+        } else {
+          return false;
+        }
+      },
   	},
     methods:{
       handleInput(val){
@@ -39,5 +49,6 @@
 <style>
 	.mu-text-field-input{
 		margin-top: 1.4em;
+    color: white;
 	}
 </style>

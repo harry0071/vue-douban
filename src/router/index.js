@@ -8,13 +8,15 @@ import Home from 'cp/Home.vue'
 import Top250 from 'cp/Top250.vue'
 import Us from 'cp/Us.vue'
 import Search from 'cp/Search.vue';
+import Detail from 'cp/detail.vue';
 
 // 2. 配置路由
 const routes = [
   { name:'home', path: '/', component: Home },
   { name: 'top250', path: '/top250', component: Top250 },
   { name:'us', path: '/us', component: Us },
-  { name:'search', path: '/search', component: Search }
+  { name:'search', path: '/search', component: Search },
+  { name:'detail', path: '/detail', component: Detail }
 ]
 
 // 3. 创建 router 实例，然后将配置 `routes` 传入

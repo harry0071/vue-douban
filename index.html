@@ -12,7 +12,7 @@
   <div id="app">
     <top-bar v-model="search" v-on="{searchMovie}"></top-bar>
     <transition name="fade">
-    <keep-alive>
+    <keep-alive exclude="Detail,Search">
       <router-view></router-view>
     </keep-alive>
   </transition>

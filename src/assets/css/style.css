@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.mu-grid-tile-subtitle {
+.mu-grid-tile-subtitle,.mu-card-title-container .mu-card-sub-title {
   color: #e09015;
 }
 

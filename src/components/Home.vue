@@ -1,8 +1,9 @@
 <template>
   <mu-container style="padding:70px 10px;">
+    <mu-circular-progress :size="46" color="success" style="margin: 0 auto;display: block;" v-show="!lists.length"></mu-circular-progress>
     <mu-load-more :loading="loading" @load="load" :loaded-all="allLoaded">
       <mu-grid-list :cols="3">
-        <mu-grid-tile v-for="(list,index) in lists" :key="index" style="height: auto">
+        <mu-grid-tile v-for="(list,index) in lists" :key="index" style="height: auto" @click="$router.push({name:'detail',query:{id:list.id}})">
           <img :src="list.images.small">
           <span slot="title">{{list.title}}</span>
           <span slot="subTitle">

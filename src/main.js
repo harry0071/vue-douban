@@ -26,7 +26,7 @@ new Vue({
 	data:{search:''},
 	computed:{
 		seen(){
-			if (this.$route.name == 'search') {
+			if (this.$route.name == 'search' || this.$route.name == 'detail') {
 				return false;
 			} else {
 				return true;
