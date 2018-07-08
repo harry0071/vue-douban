@@ -48,7 +48,13 @@
 
 <style>
 	.mu-text-field-input{
-		margin-top: 1.4em;
     color: white;
+    font-size: 20px;
 	}
+  .mu-input-content{
+    margin-top: 1.4em;
+  }
+  .mu-appbar-title{
+    line-height: 26px;
+  }
 </style>

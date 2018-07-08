@@ -4,11 +4,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //1. 定义组件
-import Home from 'cp/Home.vue'
-import Top250 from 'cp/Top250.vue'
-import Us from 'cp/Us.vue'
-import Search from 'cp/Search.vue';
-import Detail from 'cp/detail.vue';
+import Home from 'cp/Home.vue';
+const Top250 = () => import(/* webpackChunkName: "top250" */ 'cp/Top250.vue');
+const Us = () => import(/* webpackChunkName: "us" */ 'cp/Us.vue');
+const Search = () => import(/* webpackChunkName: "search" */ 'cp/Search.vue');
+const Detail = () => import(/* webpackChunkName: "detail" */ 'cp/Detail.vue');
 
 // 2. 配置路由
 const routes = [

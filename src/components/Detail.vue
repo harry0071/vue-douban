@@ -6,9 +6,10 @@
         <img :src="list.images.small">
       </mu-card-media>
       <mu-card-title :title="list.title" :sub-title="list.rating.average | zero"></mu-card-title>
-      <p class="info">导演：<span v-for="director in list.directors"> {{director.name}} </span></p>
-      <p class="info">主演：<span v-for="cast in list.casts"> {{cast.name}} </span></p>
-      <p class="info">类型：<span v-for="genre in list.genres"> {{genre}} </span></p>
+      <p class="info">导演：<span v-for="(director,i) in list.directors"> {{director.name}} <span v-if="i<list.directors.length-1">/</span></span></p>
+      <p class="info">主演：<span v-for="(cast,i) in list.casts"> {{cast.name}} <span v-if="i<list.casts.length-1">/</span></span></p>
+      <p class="info">又名：<span v-for="(aka,i) in list.aka"> {{aka}} <span v-if="i<list.aka.length-1">/</span></span></p>
+      <p class="info">类型：<span v-for="(genre,i) in list.genres"> {{genre}} <span v-if="i<list.genres.length-1">/</span></span></p>
       <h2 class="movie-title">{{list.title}}的剧情简介</h2>
       <mu-card-text>
       	{{list.summary}}
@@ -48,7 +49,7 @@
 
 	}
 	.movie-title{
-		font-size: 1.4em;
+		font-size: 1.2em;
 		color: #4caf50;
 		padding: 16px 16px 0;
 		margin-bottom: -10px;
