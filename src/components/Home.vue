@@ -14,11 +14,14 @@
     <p v-show="allLoaded" class="bottom">我是有底线的</p>
   </mu-container>
 </template>
+
 <script>
-  import jsonp from 'jsonp';
   import mixin from 'js/mixin.js';
   export default {
     mixins:[mixin],
+    created() {
+      this.getLists();
+    },
     methods: {
       getLists() {
         return this.$jsonp('https://api.douban.com/v2/movie/in_theaters', {

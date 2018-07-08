@@ -14,9 +14,6 @@ const mixin = {
         return value ? '★'.repeat(int) + '☆'.repeat(5 - int) + ' ' + value.toFixed(1) + '分' : '暂无评分';
       },
     },
-    created() {
-      this.getLists();
-    },
     methods:{
     load() {
         this.loading = true;

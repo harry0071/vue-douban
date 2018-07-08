@@ -16,7 +16,6 @@
 </template>
 
 <script>
-  import jsonp from 'jsonp';
   import mixin from 'js/mixin.js';
   export default {
     mixins:[mixin],
@@ -24,6 +23,9 @@
       return {
         allLoaded: true,
       }
+    },
+    created() {
+      this.getLists();
     },
     methods: {
       getLists() {

@@ -22,5 +22,20 @@ new Vue({
 	components:{
 		TopBar,
 		BottomNav
-	}
+	},
+	data:{search:''},
+	computed:{
+		seen(){
+			if (this.$route.name == 'search') {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	},
+	methods:{
+		searchMovie(val){
+			this.search = val;
+		}
+	},
 })

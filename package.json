@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "jsonp": "^0.2.1",
     "muse-ui": "^3.0.0-rc.4",
     "vue": "^2.5.2",
     "vue-jsonp": "^0.1.8",

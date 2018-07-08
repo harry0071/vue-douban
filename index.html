@@ -10,13 +10,13 @@
 
 <body>
   <div id="app">
-    <top-bar></top-bar>
+    <top-bar v-model="search" v-on="{searchMovie}"></top-bar>
     <transition name="fade">
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
   </transition>
-    <bottom-nav></bottom-nav>
+    <bottom-nav v-if="seen"></bottom-nav>
   </div>
 </body>
 
