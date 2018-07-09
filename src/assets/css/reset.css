@@ -29,7 +29,6 @@ ul, ol { list-style: none; }
 
 /** 重置文本格式元素 **/
 a { text-decoration: none; }
-a:hover { text-decoration: underline; }
 
 sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
 sub { vertical-align: text-bottom; }
